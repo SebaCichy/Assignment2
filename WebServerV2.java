@@ -41,7 +41,7 @@ public class WebServerV2 implements Runnable {
 
         //Pass catalog name as second argument
         String catalogString = args[1];
-        File WEB_ROOT = new File(catalogString);
+        File WEB_ROOT = new File("./" + catalogString + "");
         System.out.println(WEB_ROOT);
 
         try {
