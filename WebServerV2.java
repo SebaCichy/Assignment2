@@ -17,7 +17,7 @@ import java.util.StringTokenizer;
 // Each Client Connection will be managed in a dedicated Thread
 public class WebServerV2 implements Runnable {
     //Static catalog path
-    public File WEB_ROOT;
+    public static File WEB_ROOT;
     static final String DEFAULT_FILE = "index.html";
     static final String FILE_NOT_FOUND = "404.html";
     static final String METHOD_NOT_SUPPORTED = "not_supported.html";
@@ -41,7 +41,7 @@ public class WebServerV2 implements Runnable {
 
         //Pass catalog name as second argument
         String catalogString = args[1];
-        File WEB_ROOT = new File("./" + catalogString + "");
+        WEB_ROOT = new File("./" + catalogString + "");
         System.out.println(WEB_ROOT);
 
         try {
